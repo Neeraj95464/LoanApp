@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<header th:replace="header :: header"></header>
+<div class="container mt-5">
+    <h1 class="text-center mb-5">Our Services</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2><a th:href="@{/invest}" class="btn btn-primary">Invest</a></h2>
+                    <p>Looking for a way to grow your wealth while helping others? Our platform connects you with borrowers seeking loans, allowing you to earn attractive returns on your investment. Here's how it works:</p>
+                    <ul>
+                        <li>Sign Up: Create an account and complete our simple verification process.</li>
+                        <li>Browse Loan Requests: Explore loan requests from borrowers and choose the ones that align with your investment goals.</li>
+                        <li>Invest: Decide how much you want to lend to each borrower and fund their loan through our platform.</li>
+                        <li>Earn Returns: As borrowers repay their loans, you'll receive regular payments of both principal and interest, helping you build wealth over time.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2><a th:href="@{/borrow}" class="btn btn-primary">Get Loan</a></h2>
+                    <p>Are you facing a sudden medical emergency, home repair, or educational expense? Our platform provides a simple and efficient way for you to obtain the funds you need. With competitive interest rates and flexible repayment options, we strive to make the borrowing process as stress-free as possible. Here's how it works:</p>
+                    <ul>
+                        <li>Apply Online: Fill out our easy online application form with some basic personal and financial information.</li>
+                        <li>Get Matched: Based on your profile and requirements, we'll match you with potential lenders who fit your criteria.</li>
+                        <li>Choose Your Loan: Review offers from different lenders and select the one that best meets your needs.</li>
+                        <li>Receive Funds: Once your loan is approved, the funds will be deposited directly into your bank account.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2><a th:href="@{/latter}" class="btn btn-primary">Become Member</a></h2>
+                    <ul>
+                        <li>Security: We prioritize the security of your personal and financial information, utilizing encryption and other advanced security measures to keep your data safe.</li>
+                        <li>Transparency: We believe in transparency at every step of the lending process, providing clear terms and conditions for both borrowers and lenders.</li>
+                        <li>Customer Support: Our dedicated customer support team is here to assist you with any questions or concerns you may have, ensuring a smooth and hassle-free experience.</li>
+                    </ul>
+
+                    <p>Ready to take control of your finances? Sign up now and join the [Your Website Name] community today!</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
