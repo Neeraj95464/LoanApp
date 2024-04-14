@@ -47,6 +47,8 @@ public class SecurityConfig {
                         registry.requestMatchers("/home/**","/register/**").permitAll();
                         registry.requestMatchers("/admin/**").hasRole("ADMIN");
                         registry.requestMatchers("/user/**").hasRole("USER");
+                        registry.requestMatchers("/invest/**").authenticated();
+                        registry.requestMatchers("/borrow/**").authenticated();
                         registry.anyRequest().permitAll();
                     }).formLogin(formLogin -> formLogin
                             .loginPage("/login")

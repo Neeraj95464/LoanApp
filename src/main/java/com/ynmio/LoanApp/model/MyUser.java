@@ -1,10 +1,9 @@
 package com.ynmio.LoanApp.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Entity
 @Getter
@@ -14,12 +13,19 @@ import lombok.*;
 public class MyUser {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String role;
+
+    // Remove mappedBy and joinColumn, as MyUser is the owning side of the relationship
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private Borrow borrow;
+
+    @Column(unique = true)
     private String email;
     private String password;
     private String address;
-    private double pincode;
+    private double pinCode;
 }
+

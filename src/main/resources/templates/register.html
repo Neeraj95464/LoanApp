@@ -10,6 +10,10 @@
 <header th:replace="header :: header"></header>
 <div class="container">
     <h2 class="text-center">User Registration</h2>
+    <th:block th:if="${session.Message}">
+        <p class="text-center fs-3 text-danger">[[${session.Message}]]</p>
+<!--        <th:block th:text="${#session.removeAttribute('Message')}"></th:block>-->
+    </th:block>
     <form action="" th:action="@{/do_register}" method="POST" th:object="${user}">
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>

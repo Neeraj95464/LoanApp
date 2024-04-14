@@ -8,7 +8,8 @@ import java.util.Optional;
 
 public interface UserRepository extends CrudRepository<MyUser,Integer> {
 
-    Optional<MyUser> findUserByPincode(double pincode);
+    Optional<MyUser> findUserByPinCode(double pincode);
+    boolean existsByEmail(String email);
 
     Optional<MyUser> findUserByName(String username);
 }
